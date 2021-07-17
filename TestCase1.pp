@@ -16,6 +16,7 @@ type
   published
 	procedure FirstTest;
 	procedure SecondTest;
+	procedure ThirdTest;
   end;
 	
 implementation
@@ -39,6 +40,12 @@ procedure TTestCase1.SecondTest;
 begin
   AssertEquals(3, FPersistence.Persistence(198));
 end;
+
+procedure TTestCase1.ThirdTest;
+begin
+  AssertEquals(3, FPersistence.Persistence(-198));
+end;
+
 
 initialization
   RegisterTest(TTestCase1);
